@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Automotivecarros</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        /* Estilos do cabeçalho */
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background-color: #333;
+            padding: 10px 20px;
+            position: relative;
+        }
+
+        .logo img {
+            height: 100px; /* Ajuste a altura do logo conforme necessário */
+        }
+
+        nav {
+            display: none; /* Escondido por padrão */
+            position: absolute;
+            top: 60px; /* Abaixo do cabeçalho */
+            left: 0;
+            right: 0;
+            background-color: #333;
+            z-index: 1;
+        }
+
+        nav.active {
+            display: block; /* Exibe o menu quando ativo */
+        }
+
+        .nav {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .nav li {
+            border-bottom: 1px solid #444; /* Linha de separação entre os itens */
+        }
+
+        .nav li a {
+            display: block;
+            padding: 15px 20px;
+            color: #fff;
+            text-decoration: none;
+        }
+
+        .nav li a:hover {
+            background-color: #555; /* Efeito de hover */
+        }
+
+        .menu-hamburguer {
+            width: 30px;
+            height: 30px;
+            cursor: pointer;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            background: transparent;
+            border: none;
+        }
+
+        .menu-hamburguer div {
+            height: 4px;
+            width: 100%;
+            background: #fff;
+            transition: all 0.3s;
+        }
+
+        .close-button {
+            display: none; /* Botão de fechar */
+        }
+
+        @media (min-width: 768px) {
+            nav {
+                display: block; /* Mostra o menu em telas maiores */
+                position: static; /* Retira a posição absoluta */
+            }
+            .menu-hamburguer {
+                display: none; /* Esconde o menu hamburguer em telas grandes */
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="imagens/logo.png" alt="Logotipo Automotivecarros">
+        </div>
+        <div class="menu-hamburguer" id="menuButton">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+        <nav class="navbar" id="navbarNav">
+            <ul class="nav">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="quem-somos.html">Quem Somos</a></li>
+                <li><a href="servicos.html">Serviços</a></li>
+                <li><a href="produtos.html">Produtos</a></li>
+                <li><a href="orcamento.html">Orçamentos</a></li>
+                <li><a href="contato.html">Contato</a></li>
+            </ul>
+            <button class="close-button" id="closeButton" aria-label="Close menu"></button>
+        </nav>
+    </header>
+
+    <script>
+        const menuButton = document.getElementById('menuButton');
+        const navbarNav = document.getElementById('navbarNav');
+        const closeButton = document.getElementById('closeButton');
+
+        // Abrir o menu
+        menuButton.addEventListener('click', () => {
+            navbarNav.classList.toggle('active');
+        });
+
+        // Fechar o menu ao clicar fora
+        closeButton.addEventListener('click', () => {
+            navbarNav.classList.remove('active');
+        });
+
+        // Fechar o menu quando clicar em um item do menu
+        document.querySelectorAll('.nav a').forEach(link => {
+            link.addEventListener('click', () => {
+                navbarNav.classList.remove('active');
+            });
+        });
+    </script>
+</body>
+</html>
+
+    
+
+  <section class="products">
+    <h1>Nossos Produtos</h1>
+
+    <div class="product-item">
+      <img src="imagens/mclaren.jpg" alt="McLaren">
+      <h2>McLaren 750S 2024</h2>
+      <p>Sucessor do 720S tem motor V8 de 750 cv e acelera de 0 a 100 km/h em 2,8 segundos.</p>
+      <p class="preço">R$2.349.000,00</p>
+      <a href="fichastecnicas.html/fichatecnicamclaren.html">Clique aqui para saber mais.</a>
+    </div>
+
+    <div class="product-item">
+      <img src="imagens/ferrari Enzo.jpg" alt="Ferrari Enzo">
+      <h2>Ferrari Enzo</h2>
+      <p>Ferrari Enzo, modelo de produção limitada que leva o nome do criador da marca, quebra a banca mais uma vez,
+        A grade traseira estreita, logotipo pequeno,além das quatros saídas de escape e quatro lanternas traseiras, despertam muitas saudades.</p>
+      <p class="price">R$12,9milhões.</p>
+      <a href="fichastecnicas.html/fichatecnicaferrarienzo.html">Clique aqui para saber mais.</a>
+    </div>
+
+    <div class="product-item">
+      <img src="imagens/lamborghini-revuelto-11-1160x652.jpg" alt="Lamborghini">
+      <h2>Lamborghini</h2>
+      <p>Primeiro híbrido plug-in da Lamborghini, Revuelto combina V12 a três motores elétricos para entregar 1.015 cv e chegar aos 100 km/h e 2,5 s.</p>
+      <p class="price">R$6 milhões</p>
+      <a href="fichastecnicas.html/fichatecnicalamborghini.html">Clique aqui para saber mais.</a>
+    </div>
+
+    <div class="product-item">
+      <img src="imagens/porsche_taycan.JPG" alt="Porsche Taycan">
+      <h2>Porsche</h2>
+      <p>O Porsche Taycan está em produção desde 2019 e ainda não havia passado por nenhuma grande atualização. Até agora. O novo Porsche Taycan tem visual diferente, mais potência, mais tecnologia e melhor da Porsche</p>
+      <p class="price">R$490.000</p>
+      <a href="fichastecnicas.html/fichatecnicaporche.html">Clique aqui para saber mais.</a>
+    </div>
+
+    <div class="product-item">
+      <img src="imagens/dodge_charger_1970.jpg" alt="Gel para Cabelo">
+      <h2>Dodge Charger ano 1970</h2>
+      <p>Modelo Dodger Charger 1970 na cor preta,grande desempenho e velocidade.</p>
+      <p class="price">R$ 1.490.000</p>
+      <a href="fichastecnicas.html/fichadodgercharger.html">Clique aqui para saber mais.</a>
+    </div>
+  </section>
+
+  <!-- Rodapé -->
+  <footer class="footer">
+    <div class="footer-content">
+        <p><strong>Endereço:</strong> Av.Presidente Juscelino Kubitschek, 2041 - Centro, São Paulo, São Paulo</p>
+        <p><strong>Telefone:</strong>(11) 77777-3333</p>
+        <p><strong>E-mail:</strong>  contato@Automotivecarros.com.br</p>
+        <div class="social-links">
+            <a href="https://facebook.com" target="_blank">Facebook</a> |
+            <a href="https://instagram.com" target="_blank">Instagram</a> |
+            <a href="https://twitter.com" target="_blank">Twitter</a>
+        </div>
+    </div>
+</footer>
+</body>
+</html>

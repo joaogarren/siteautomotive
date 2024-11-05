@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Automotivecarros</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        /* Estilos do cabeçalho */
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background-color: #333;
+            padding: 10px 20px;
+            position: relative;
+        }
+
+        .logo img {
+            height: 100px; /* Ajuste a altura do logo conforme necessário */
+        }
+
+        nav {
+            display: none; /* Escondido por padrão */
+            position: absolute;
+            top: 60px; /* Abaixo do cabeçalho */
+            left: 0;
+            right: 0;
+            background-color: #333;
+            z-index: 1;
+        }
+
+        nav.active {
+            display: block; /* Exibe o menu quando ativo */
+        }
+
+        .nav {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .nav li {
+            border-bottom: 1px solid #444; /* Linha de separação entre os itens */
+        }
+
+        .nav li a {
+            display: block;
+            padding: 15px 20px;
+            color: #fff;
+            text-decoration: none;
+        }
+
+        .nav li a:hover {
+            background-color: #555; /* Efeito de hover */
+        }
+
+        .menu-hamburguer {
+            width: 30px;
+            height: 30px;
+            cursor: pointer;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            background: transparent;
+            border: none;
+        }
+
+        .menu-hamburguer div {
+            height: 4px;
+            width: 100%;
+            background: #fff;
+            transition: all 0.3s;
+        }
+
+        .close-button {
+            display: none; /* Botão de fechar */
+        }
+
+        @media (min-width: 768px) {
+            nav {
+                display: block; /* Mostra o menu em telas maiores */
+                position: static; /* Retira a posição absoluta */
+            }
+            .menu-hamburguer {
+                display: none; /* Esconde o menu hamburguer em telas grandes */
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="imagens/logo.png" alt="Logotipo Automotivecarros">
+        </div>
+        <div class="menu-hamburguer" id="menuButton">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+        <nav class="navbar" id="navbarNav">
+            <ul class="nav">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="quem-somos.html">Quem Somos</a></li>
+                <li><a href="servicos.html">Serviços</a></li>
+                <li><a href="produtos.html">Produtos</a></li>
+                <li><a href="orcamento.html">Orçamentos</a></li>
+                <li><a href="contato.html">Contato</a></li>
+            </ul>
+            <button class="close-button" id="closeButton" aria-label="Close menu"></button>
+        </nav>
+    </header>
+
+    <script>
+        const menuButton = document.getElementById('menuButton');
+        const navbarNav = document.getElementById('navbarNav');
+        const closeButton = document.getElementById('closeButton');
+
+        // Abrir o menu
+        menuButton.addEventListener('click', () => {
+            navbarNav.classList.toggle('active');
+        });
+
+        // Fechar o menu ao clicar fora
+        closeButton.addEventListener('click', () => {
+            navbarNav.classList.remove('active');
+        });
+
+        // Fechar o menu quando clicar em um item do menu
+        document.querySelectorAll('.nav a').forEach(link => {
+            link.addEventListener('click', () => {
+                navbarNav.classList.remove('active');
+            });
+        });
+    </script>
+</body>
+</html>
+
+    
+
+        <h1>Serviços da AutomotiveCarros</h1>
+        <p>A AutomotiveCarros é especializada em oferecer soluções automotivas de qualidade para todos os nossos clientes. Conheça abaixo nossos principais serviços!</p>
+    </header>
+
+    <main>
+        <section class="services">
+            <h2>Nossos Serviços</h2>
+            
+            <div class="service-item">
+                <h3>Manutenção Preventiva</h3>
+                <p>Nossa equipe realiza uma manutenção completa para garantir que seu veículo esteja sempre em ótimas condições. Realizamos revisões periódicas para evitar problemas futuros e manter seu carro seguro.</p>
+            </div>
+
+            <div class="service-item">
+                <h3>Reparos Mecânicos</h3>
+                <p>Oferecemos serviços de reparos mecânicos, incluindo diagnóstico e conserto de motores, transmissão, suspensão, freios e outros componentes fundamentais do seu carro.</p>
+            </div>
+
+            <div class="service-item">
+                <h3>Serviço de Funilaria e Pintura</h3>
+                <p>Para quem deseja restaurar a estética do veículo, nossa equipe especializada oferece serviços de funilaria e pintura, cuidando de arranhões, amassados e renovando a pintura.</p>
+            </div>
+
+            <div class="service-item">
+                <h3>Troca de Óleo e Filtros</h3>
+                <p>Realizamos a troca de óleo e filtros de forma rápida e eficiente, utilizando produtos de qualidade para garantir o melhor desempenho do seu veículo.</p>
+            </div>
+
+            <div class="service-item">
+                <h3>Alinhamento e Balanceamento</h3>
+                <p>Para um melhor desempenho e segurança ao dirigir, oferecemos serviços de alinhamento e balanceamento, fundamentais para a estabilidade do veículo e a conservação dos pneus.</p>
+            </div>
+
+            <div class="service-item">
+                <h3>Instalação de Acessórios</h3>
+                <p>Trabalhamos com a instalação de acessórios automotivos, como sistemas de som, películas, e outros itens que personalizam seu carro e melhoram sua funcionalidade.</p>
+            </div>
+
+            <div class="service-item">
+                <h3>Inspeção Completa do Veículo</h3>
+                <p>Realizamos uma inspeção detalhada do veículo, avaliando todos os componentes para garantir sua segurança e identificar possíveis pontos de atenção antes que se tornem problemas maiores.</p>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <p><strong>Endereço:</strong> Av. Presidente Juscelino Kubitschek, 2041 - Centro, São Paulo, SP</p>
+            <p><strong>Telefone:</strong> (11) 77777-3333</p>
+            <p><strong>E-mail:</strong> contato@automotivecarros.com.br</p>
+            <div class="social-links">
+                <a href="https://facebook.com" target="_blank">Facebook</a> |
+                <a href="https://instagram.com" target="_blank">Instagram</a> |
+                <a href="https://twitter.com" target="_blank">Twitter</a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

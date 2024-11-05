@@ -1,0 +1,338 @@
+/* Reset básico para garantir consistência entre navegadores */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #737373;
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Cabeçalho */
+  header {
+    background-color: #333;
+    color: #fff;
+    padding: px;
+    text-align: center;
+  }
+  
+/* Estilos para a imagem do logo */
+.logo {
+  display: block;
+  width: 150px; /* Define a largura do logo */
+  height: auto; /* Mantém a proporção original da imagem */
+  transition: transform 0.3s ease; /* Adiciona uma transição suave para efeitos */
+}
+
+/* Efeito ao passar o mouse sobre o logo */
+.logo:hover {
+  transform: scale(1.1); /* Aumenta o tamanho do logo ao passar o mouse */
+}
+
+/* Adicionar espaçamento ao redor do logo, se necessário */
+header .logo {
+  margin-top: 0px;
+  margin-bottom: 20px;
+}
+
+  header h1 {
+    font-size: 2.5rem;
+  }
+  
+  nav {
+    background-color: #333;
+    text-align: center;
+  }
+  
+  nav ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  nav ul li {
+    display: inline-block;
+    margin: 0 15px;
+  }
+  
+  nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.1rem;
+  }
+  
+  nav ul li a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Seção sobre a Concessionaria */
+  #sobre {
+    padding: 50px;
+    background-color: #fff;
+    text-align: center;
+  }
+  
+  #sobre h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+  }
+  
+  #sobre p {
+    font-size: 1.2rem;
+    max-width: 800px;
+    margin: 0 auto;
+    color: #333;
+  }
+  
+  /* Estilização dos serviços */
+  #servicos {
+    background-color: #eaeaea;
+    padding: 50px 0;
+    text-align: center;
+  }
+  
+  #servicos h2 {
+    font-size: 2rem;
+    margin-bottom: 40px;
+  }
+  
+  .servico {
+    display: inline-block;
+    width: 30%;
+    padding: 20px;
+    background-color: #fff;
+    margin: 0 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .servico img {
+    width: 100%;
+    height: auto;
+  }
+  
+  .servico h3 {
+    margin-top: 15px;
+    font-size: 1.5rem;
+  }
+  
+  .servico p {
+    color: #333;
+    margin-top: 10px;
+  }
+  
+  /* Estilização dos produtos */
+  #produtos {
+    padding: 50px;
+    background-color: #f9f9f9;
+  }
+  
+  #produtos h2 {
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 40px;
+  }
+  
+  .product-item {
+    display: inline-block;
+    width: 30%;
+    padding: 20px;
+    background-color: #737373;
+    margin: 0 10px 40px 10px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .product-item img {
+    width: 100%;
+    height: auto;
+  }
+  
+  .product-item h2 {
+    font-size: 1.5rem;
+    margin: 15px 0;
+  }
+  
+  .product-item p {
+    color: #333;
+    margin-top: 10px;
+    font-size: 1rem;
+  }
+  
+  .product-item .price {
+    font-size: 1.4rem;
+    color: #333;
+    margin: 15px 0;
+  }
+  
+  .product-item button {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    font-size: 1.1rem;
+  }
+  
+  .product-item button:hover {
+    background-color: #333;
+  }
+  
+  body, html {
+    margin: 0; /* Remove a margem padrão do body e do html */
+    height: 100%; /* Define a altura como 100% */
+}
+
+body, html {
+  margin: 0; /* Remove a margem padrão do body e do html */
+  height: 100%; /* Define a altura como 100% */
+}
+
+body, html {
+  margin: 0; /* Remove a margem padrão do body e do html */
+  height: 100%; /* Define a altura como 100% */
+}
+
+.background-container {
+  background-image: url('../imagens/logo.png'); /* Substitua pelo caminho da sua imagem */
+  background-size: cover; /* Faz a imagem cobrir todo o container */
+  background-position: center; /* Centraliza a imagem */
+  height: 100vh; /* Ocupa 100% da altura da janela */
+  display: flex; /* Utiliza Flexbox para centralizar o texto */
+  justify-content: center; /* Centraliza horizontalmente */
+  align-items: center; /* Centraliza verticalmente */
+}
+
+.overlay {
+  background-color: rgba(0, 0, 0, 0.5); /* Fundo semi-transparente para melhorar a legibilidade do texto */
+  color: white; /* Cor do texto */
+  padding: 20px; /* Espaçamento interno */
+  border-radius: 10px; /* Bordas arredondadas */
+  text-align: center; /* Centraliza o texto */
+}
+
+h1 {
+  margin: 0; /* Remove a margem padrão do h1 */
+}
+
+p {
+  margin: 10px 0 0; /* Margens para o parágrafo */
+}
+
+
+  /* Seção de contato */
+  #contato {
+    background-color: #333;
+    color: #333;
+    padding: 50px;
+    text-align: center;
+  }
+  
+  #contato h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+  }
+  
+  #contato p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+  }
+  
+  #contato form {
+    max-width: 500px;
+    margin: 0 auto;
+  }
+  
+  #contato input[type="text"],
+  #contato input[type="email"],
+  #contato textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 5px;
+  }
+  
+  #contato input[type="submit"] {
+    background-color: #333;
+    color:#fff;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    font-size: 1.1rem;
+  }
+  
+  #contato input[type="submit"]:hover {
+    background-color: #333;
+  }
+  
+  /* Rodapé */
+  /* Reseta margens e preenchimentos */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.footer-content{
+    min-height: 1vh;
+    display: flex;
+    flex-direction: column;
+    font-family: Arial, sans-serif;
+}
+
+.footer{
+    flex: 0; /* Ocupa o espaço disponível acima do rodapé */
+}
+
+.content {
+  flex: 0; /* Ocupa o espaço disponível acima do rodapé */
+}
+
+/* Adicione isso ao seu arquivo style.css */
+
+html, body {
+  height: 100%;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex: 1;
+}
+
+.footer {
+  background-color: #333;
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
+
+.footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+}
+
+.footer-content p {
+    margin: 5px 0;
+}
+
+.social-links a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 5px;
+}
+
+.social-links a:hover {
+    color: #ddd;
+}
+

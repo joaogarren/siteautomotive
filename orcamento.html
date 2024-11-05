@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Automotivecarros</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        /* Estilos do cabeçalho */
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background-color: #333;
+            padding: 10px 20px;
+            position: relative;
+        }
+
+        .logo img {
+            height: 100px; /* Ajuste a altura do logo conforme necessário */
+        }
+
+        nav {
+            display: none; /* Escondido por padrão */
+            position: absolute;
+            top: 60px; /* Abaixo do cabeçalho */
+            left: 0;
+            right: 0;
+            background-color: #333;
+            z-index: 1;
+        }
+
+        nav.active {
+            display: block; /* Exibe o menu quando ativo */
+        }
+
+        .nav {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .nav li {
+            border-bottom: 1px solid #444; /* Linha de separação entre os itens */
+        }
+
+        .nav li a {
+            display: block;
+            padding: 15px 20px;
+            color: #fff;
+            text-decoration: none;
+        }
+
+        .nav li a:hover {
+            background-color: #555; /* Efeito de hover */
+        }
+
+        .menu-hamburguer {
+            width: 30px;
+            height: 30px;
+            cursor: pointer;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            background: transparent;
+            border: none;
+        }
+
+        .menu-hamburguer div {
+            height: 4px;
+            width: 100%;
+            background: #fff;
+            transition: all 0.3s;
+        }
+
+        .close-button {
+            display: none; /* Botão de fechar */
+        }
+
+        @media (min-width: 768px) {
+            nav {
+                display: block; /* Mostra o menu em telas maiores */
+                position: static; /* Retira a posição absoluta */
+            }
+            .menu-hamburguer {
+                display: none; /* Esconde o menu hamburguer em telas grandes */
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="imagens/logo.png" alt="Logotipo Automotivecarros">
+        </div>
+        <div class="menu-hamburguer" id="menuButton">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+        <nav class="navbar" id="navbarNav">
+            <ul class="nav">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="quem-somos.html">Quem Somos</a></li>
+                <li><a href="servicos.html">Serviços</a></li>
+                <li><a href="produtos.html">Produtos</a></li>
+                <li><a href="orcamento.html">Orçamentos</a></li>
+                <li><a href="contato.html">Contato</a></li>
+            </ul>
+            <button class="close-button" id="closeButton" aria-label="Close menu"></button>
+        </nav>
+    </header>
+
+    <script>
+        const menuButton = document.getElementById('menuButton');
+        const navbarNav = document.getElementById('navbarNav');
+        const closeButton = document.getElementById('closeButton');
+
+        // Abrir o menu
+        menuButton.addEventListener('click', () => {
+            navbarNav.classList.toggle('active');
+        });
+
+        // Fechar o menu ao clicar fora
+        closeButton.addEventListener('click', () => {
+            navbarNav.classList.remove('active');
+        });
+
+        // Fechar o menu quando clicar em um item do menu
+        document.querySelectorAll('.nav a').forEach(link => {
+            link.addEventListener('click', () => {
+                navbarNav.classList.remove('active');
+            });
+        });
+    </script>
+</body>
+</html>
+
+    <style>
+        /* Estilo básico */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body, html {
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            font-family: Arial, sans-serif;
+        }
+
+        /* Conteúdo principal */
+        .content {
+            flex: 1;
+            padding: 20px;
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        .quote-form {
+            max-width: 600px;
+            margin: 0 auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .quote-form label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+        }
+
+        .quote-form input, .quote-form textarea, .quote-form select {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .quote-form button {
+            width: 100%;
+            padding: 10px;
+            background-color: #333;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .quote-form button:hover {
+            background-color: #555;
+        }
+
+        /* Estilo do rodapé */
+        .footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .footer p, .footer .social-links {
+            margin: 10px 0;
+        }
+
+        .social-links a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+
+        .social-links a:hover {
+            color: #ddd;
+        }
+    </style>
+</head>
+<body>
+    <div class="content">
+        <h1>Solicite um Orçamento</h1>
+        <div class="quote-form">
+            <form action="https://formspree.io/f/mjkvwvjd" method="POST">
+                <label for="name">Nome:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">E-mail:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="service">Serviço:</label>
+                <select id="service" name="service" required>
+                    <option value="reparo">Reparo</option>
+                    <option value="pintura">Pintura</option>
+                    <option value="manutencao">Manutenção</option>
+                    <option value="outros">Outros</option>
+                </select>
+
+                <label for="message">Detalhes do Orçamento:</label>
+                <textarea id="message" name="message" rows="5" required></textarea>
+
+                <button type="submit">Enviar Solicitação</button>
+            </form>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <p><strong>Endereço:</strong> Av. Presidente Juscelino Kubitschek, 2041 - Centro, São Paulo, SP</p>
+        <p><strong>Telefone:</strong> (11) 77777-3333</p>
+        <p><strong>E-mail:</strong> contato@automotivecarros.com.br</p>
+        <div class="social-links">
+            <a href="https://facebook.com" target="_blank">Facebook</a> |
+            <a href="https://instagram.com" target="_blank">Instagram</a> |
+            <a href="https://twitter.com" target="_blank">Twitter</a>
+        </div>
+    </footer>
+</body>
+</html>
